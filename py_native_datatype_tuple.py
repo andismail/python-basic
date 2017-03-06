@@ -155,3 +155,45 @@ for name in ('John', 'Kate'):
 # sorted()	Take elements in the tuple and return a new sorted list (does not sort the tuple itself).
 # sum()	Return the sum of all elements in the tuple.
 # tuple()	Convert an iterable (list, string, set, dictionary) to a tuple.
+
+# +About tuple
+# tuple more like a entity model not only the data struts
+# 1.Tuples are used for grouping data
+year_born = ("Paris Hilton", 1981)
+# This is an example of a data structure — a mechanism for grouping and organizing data to make it easier to use.
+# a tuple can be used to group any number of items into a single compound value
+julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
+# Tuples are useful for representing what other languages often call records — some related information that belongs together, like your student record.
+# There is no description of what each of these fields means, but we can guess.
+# A tuple lets us “chunk” together related information and use it as a single thing.
+#
+# To construct the new tuple, it is convenient that we can slice parts of the old tuple and join up the bits to make the new tuple.
+# So if julia has a new recent film, we could change her variable to reference a new tuple that used some information from the old one:
+julia = julia[:3] + ("Eat Pray Love", 2010) + julia[5:]
+#
+# 2.Tuple assignment
+# Python has a very powerful tuple assignment feature that allows a tuple of variables on the left of an assignment to be assigned values from a tuple on the right of the assignment.
+(name, surname, b_year, movie, m_year, profession, b_place) = julia
+# This does the equivalent of seven assignment statements, all on one easy line.
+# One requirement is that the number of variables on the left must match the number of elements in the tuple.
+#
+# Once in a while, it is useful to swap the values of two variables.
+(a, b) = (b, a)
+#
+# 3.Tuples as return values
+# we could write a function that returns both the area and the circumference of a circle of radius r:
+def f(r):
+    '''Return (circumference, area) of a circle of radius r '''
+    c = 3.14 * r * 2
+    a = 3.14 * r ** 2
+    return (c, a)
+#
+# 4.Composability of Data Structures(数据结构的可组合性)
+julia_more_info = (("Julia", "Roberts"), (8, "October", 1967), "Actress", ("Atlanta", "Georgia"),
+                   [("Duplicity", 2009),
+                    ("Notting Hill", 1999),
+                    ("Pretty Woman", 1990),
+                    ("Erin Brockovich", 2000),
+                    ("Eat Pray Love", 2010),
+                    ("Mona Lisa Smile", 2003),
+                    ("Oceans Twelve", 2004)])
