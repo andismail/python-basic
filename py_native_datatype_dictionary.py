@@ -60,7 +60,7 @@ print(squares)  # Throws Error
 # clear()	Remove all items form the dictionary.
 # copy()	Return a shallow copy of the dictionary.
 # fromkeys(seq[, v])	Return a new dictionary with keys from seq and value equal to v (defaults to None).
-# get(key[,d])	Return the value of key. If key doesnot exit, return d (defaults to None).
+# get(key[,d])	Return the value of key. If key doesn't exit, return d (defaults to None).
 # items()	Return a new view of the dictionary's items (key, value).
 # keys()	Return a new view of the dictionary's keys.
 # pop(key[,d])	Remove the item with key and return its value or d if key is not found. If d is not provided and key is not found, raises KeyError.

@@ -20,29 +20,26 @@ print(x % -2)  # -1
 # > < == != >= <=
 
 # +Logical operators
-# and or not
+# and ,or ,not
 x = True
 y = False
-# Output: x and y is False
-print('x and y is', x and y)
-# Output: x or y is True
-print('x or y is', x or y)
-# Output: not x is False
-print('not x is', not x)
+print('x and y is', x and y) # Output: x and y is False
+print('x or y is', x or y) # Output: x or y is True
+print('not x is', not x) # Output: not x is False
 
 # +Bitwise operators
 # Bitwise operators act on operands as if they were string of binary digits.
 # 按位运算符作用于操作数，就好像它们是二进制数字的字符串
 # It operates bit by bit, hence the name.
 # 它逐位操作，因此得名
-#                                       x = 10  # 0000 1010
-#                                       y = 4   # 0000 0100
-# &	    Bitwise AND (0&1=0)	            x& y = 0 (0000 0000)
-# |	    Bitwise OR (0|1=1)	            x | y = 14 (0000 1110)
-# ~	    Bitwise NOT	(0变1,1变0)          ~x = -11 (1111 0101)
-# ^	    Bitwise XOR	                    x ^ y = 14 (0000 1110)
+#                                       x = 10     0000 1010
+#                                       y = 4      0000 0100
+# &	    Bitwise AND (0&1=0)	            x & y = 0 (0000 0000)
+# |	    Bitwise OR (0|1=1)	            x | y = 14(0000 1110)
+# ~	    Bitwise NOT	(0变1,1变0)          ~x = -11  (1111 0101)
+# ^	    Bitwise XOR	                    x ^ y = 14(0000 1110)
 # >>	Bitwise right shift(整体右移2位)	x>> 2 = 2 (0000 0010)
-# <<	Bitwise left shift(整体左移2位)	x<< 2 = 42 (0010 1000) 移几位就是x*2的几次方
+# <<	Bitwise left shift(整体左移2位)	x<< 2 = 42(0010 1000) 移几位就是x*2的几次方
 
 # +Associativity of Python Operators
 # Exponent operator ** has right-to-left associativity in Python.

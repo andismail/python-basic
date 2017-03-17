@@ -92,7 +92,7 @@ greet("Bruce","How do you do?")
 # Any number of arguments in a function can have a default value. But once we have a default argument, all the arguments to its right must also have default values.
 # This means to say, non-default arguments cannot follow default arguments. For example, if we had defined the function header above as:
 def greet(msg = "Good morning!", name):
-	pass
+    pass
 # SyntaxError: non-default argument follows default argument
 #
 # -Python Keyword Arguments
@@ -107,9 +107,9 @@ greet(name="Bruce","How do you do?")
 # SyntaxError: non-keyword arg after keyword arg
 #
 # -Python Arbitrary Arguments
-# Sometimes, we do not know in advance the number of arguments that will be passed into 
-# a function.Python allows us to handle this kind of situation through function calls with arbitrary number of arguments.
-# In the function definition we use an asterisk (*) before the parameter name to denote this kind of argument. Here is an example.
+# Sometimes, we do not know in advance the number of arguments that will be passed into a function.
+# Python allows us to handle this kind of situation through function calls with arbitrary number of arguments.
+# In the function definition we use an asterisk (*) before the parameter name to denote this kind of argument.
 def greet(*names):
    """This function greets all
    the person in the names tuple."""
