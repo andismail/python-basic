@@ -50,7 +50,7 @@ print(1 + 2.0)  # 3.0
 # These function can even convert from strings.
 int(2.3)  # 2
 int(-2.3)  # -2
-float(2)  # 2
+float(2)  # 2.0
 
 # +Python Decimal
 print((1.1 + 2.2) == 3.3)  # False
