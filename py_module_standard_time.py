@@ -71,14 +71,13 @@ _date.today()  # 2017-03-23 <class 'datetime.date'>
 
 from datetime import datetime as _datetime
 
-_datetime(2017, 3, 23, 18, 23, 19)
+_datetime(2017, 3, 23, 18, 23, 19) # 2017-03-23 18:23:19
 
-now = _datetime.now()
-print(now.strftime('%Y-%m-%d %H:%M:%S'))
-print('now', now)
-print(now.time())
-print(now.date())
-print(_datetime.today())
+now = _datetime.now() # 2017-03-24 17:28:10.846293
+now.strftime('%Y-%m-%d %H:%M:%S') # 2017-03-24 17:28:10
+now.time() # 17:28:10.846293
+now.date() # 2017-03-24
+_datetime.today() # 2017-03-24 17:28:10.846366
 #
 #
 #
