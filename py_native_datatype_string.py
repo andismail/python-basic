@@ -93,3 +93,150 @@ print(keyword_order)  # --- Keyword Order ---
 x = 12.3456789
 print('The value of x is %3.2f' % x)  # The value of x is 12.35
 print('The value of x is %3.4f' % x)  # The value of x is 12.3457
+
+# +String Method
+#
+'python'.capitalize() # output: Python
+# Return a copy of the string with its first character capitalized and the rest lowercased.
+#
+# str.center(width[, fillchar])
+'python'.center(10,'*') # output: '**python**'
+# Return centered in a string of length width. Padding is done using the specified fillchar (default is an ASCII space).
+# The original string is returned if width is less than or equal to len(s).
+#
+# str.count(sub[, start[, end]])
+'python3.6'.count('3') # output: 1
+# Return the number of non-overlapping occurrences of substring sub in the range [start, end].
+# Optional arguments start and end are interpreted as in slice notation.
+#
+#str.startswith(prefix[, start[, end]])
+'python3.6'.startswith('t',2)
+# Return True if string starts with the prefix, otherwise return False. prefix can also be a tuple of prefixes to look for. 
+# With optional start, test string beginning at that position. With optional end, stop comparing string at that position.
+#
+# str.endswith(suffix[, start[, end]])
+'python3.6'.endswith('3',0,-2)
+# Return True if the string ends with the specified suffix, otherwise return False. 
+# suffix can also be a tuple of suffixes to look for. With optional start, test beginning at that position.
+# With optional end, stop comparing at that position.
+#
+# str.find(sub[, start[, end]])
+'python3.6'.find('3') # output 6
+# Return the lowest index in the string where substring sub is found within the slice s[start:end].
+# Optional arguments start and end are interpreted as in slice notation. Return -1 if sub is not found.
+#
+# str.rfind(sub[, start[, end]])
+'abacadef'.rfind('a') # output: 4
+# Return the highest index in the string where substring sub is found, such that sub is contained within s[start:end]. 
+# Optional arguments start and end are interpreted as in slice notation. Return -1 on failure.
+#
+# str.index(sub[, start[, end]])
+'python3.6'.index('3') # output 6 
+# Like find(), but raise ValueError when the substring is not found. ValueError: substring not found
+#
+# str.rindex(sub[, start[, end]])
+'abacadef'.rindex('a') # output: 4
+# Like rfind() but raises ValueError when the substring sub is not found.
+#
+# str.isalnum()
+'python3.6'.isalnum() # True
+# Return true if all characters in the string are alphanumeric and there is at least one character, false otherwise.
+# A character c is alphanumeric if one of the following returns True: c.isalpha(), c.isdecimal(), c.isdigit(), or c.isnumeric().
+#
+# str.isalpha()
+'python3.6'.isalpha() # False
+# Return true if all characters in the string are alphabetic and there is at least one character, false otherwise. 
+#
+# str.isdecimal()
+'python3.6'.isdecimal() # False
+# Return true if all characters in the string are decimal characters and there is at least one character, false otherwise. 10!!
+#
+# str.isdigit()
+'python3.6'.isdigit() # False
+# Return true if all characters in the string are digits and there is at least one character, false otherwise. 
+# Digits include decimal characters and digits that need special handling, such as the compatibility superscript digits.
+#
+# str.isidentifier()
+# Return true if the string is a valid identifier according to the language definition.
+#
+# str.islower()
+'python3.6'.islower()
+# Return true if all cased characters in the string are lowercase and there is at least one cased character, false otherwise.
+#
+# str.lower()
+'PYTHON3.6'.lower() # 'python3.6'
+# Return a copy of the string with all the cased characters [4] converted to lowercase.
+#
+# str.isupper()
+'python3.6'.isupper()
+# Return true if all cased characters [4] in the string are uppercase and there is at least one cased character, false otherwise.
+#
+# str.upper()
+'python3.6'.isupper()
+# Return a copy of the string with all the cased characters [4] converted to uppercase.
+# Note that str.upper().isupper() might be False
+#
+# str.isnumeric()
+# Return true if all characters in the string are numeric characters, and there is at least one character, false otherwise.
+#
+# str.isspace()
+'         '.isspace() # True
+#
+#
+# str.istitle()
+'I Am A Title'.istitle()
+# Return true if the string is a titlecased string and there is at least one character,
+# for example uppercase characters may only follow uncased characters and lowercase characters only cased ones. Return false otherwise.
+#
+# str.join(iterable)
+','.join(['1', '2', '3', '4', '5'])
+# Return a string which is the concatenation of the strings in the iterable iterable. A TypeError will be raised if there are any non-string values 
+# in iterable, including bytes objects. The separator between elements is the string providing this method.
+#
+# str.ljust(width[, fillchar])
+'python3.6'.ljust(15,'*') # output: 'python3.6******'
+# Return the string left justified in a string of length width. Padding is done using the specified
+# fillchar (default is an ASCII space). The original string is returned if width is less than or equal to len(s).
+#
+# str.rjust(width[, fillchar])
+'python3.6'.rjust(15,'*') # output: '******python3.6'
+# Return the string right justified in a string of length width. Padding is done using the specified
+# fillchar (default is an ASCII space). The original string is returned if width is less than or equal to len(s).
+#
+# str.partition(sep)
+# str.rpartition(sep)
+'abcdef'.partition('abc') # output :('', 'abc', 'def')
+# Split the string at the first occurrence of sep, and return a 3-tuple containing the part before the separator,the separator itself,
+# and the part after the separator.If the separator is not found, return a 3-tuple containing the string itself, followed by two empty strings.
+#
+# str.replace(old, new[, count])
+'abacadef'.replace('a','A', 2) # output: 'AbAcadef'
+# Return a copy of the string with all occurrences of substring old replaced by new.
+# If the optional argument count is given, only the first count occurrences are replaced.
+#
+# str.split(sep=None, maxsplit=-1)
+# str.rsplit(sep=None, maxsplit=-1)
+'1,1,1,1,1'.split(',',1) # ['1', '1,1,1,1']
+'1,1,1,1,1'.rsplit(',',1) # ['1,1,1,1', '1']
+# Return a list of the words in the string, using sep as the delimiter string. 
+# If maxsplit is given, at most maxsplit splits are done (thus, the list will have at most maxsplit+1 elements). 
+# If maxsplit is not specified or -1, then there is no limit on the number of splits (all possible splits are made).
+#
+# str.swapcase()
+'Python3.6'.swapcase() # output: 'pYTHON3.6'
+# Return a copy of the string with uppercase characters converted to lowercase and vice versa.
+# Note that it is not necessarily true that s.swapcase().swapcase() == s.
+
+# Truth Value Testing
+# Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below.
+# The following values are considered false:
+# None
+# False
+# zero of any numeric type, for example, 0, 0.0, 0j.
+# any empty sequence, for example, '', (), [].
+# any empty mapping, for example, {}.
+# instances of user-defined classes, if the class defines a __bool__() or __len__() method, when that method returns the integer zero or bool value False.
+
+# check string is empty or all whitespace or None
+s = 'str'
+if not isinstance(s,str) or not s or s.isspace(): print(s + ' is empty or None or all whitespace')
