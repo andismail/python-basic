@@ -96,6 +96,13 @@ print('The value of x is %3.4f' % x)  # The value of x is 12.3457
 
 # +String Method
 #
+# str.strip()
+'0000000this is string example....wow!!!0000000'.strip('0') # output :'this is string example....wow!!!'
+'www.example.com'.strip('w.moc') # output: 'example'
+'  py  '.strip() # output: 'py'
+# str.lstrip()
+# str.rstrip()
+
 'python'.capitalize() # output: Python
 # Return a copy of the string with its first character capitalized and the rest lowercased.
 #
