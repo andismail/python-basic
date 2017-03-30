@@ -147,3 +147,7 @@ numbers = [2.5, 3, 4, -5]
 sum(numbers)
 sum(numbers, 10)
 # If you need to add floating point numbers with exact precision then, you should use math.fsum(iterable) instead
+
+# mutil for loop, _ means a value you don't care or want
+for _, cheese, color in [1, 2, 3], ['manchego', 'stilton', 'brie'], ['red', 'blue', 'green']:
+    print('{} {}'.format(color, cheese))
