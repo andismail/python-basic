@@ -59,3 +59,16 @@ https://gist.github.com/rmoff/5a70862f27d2284e9541
 	SELECT TABLE_NAME FROM DBA_TABLES; # 全有一大堆表，不知道都是些啥,可以用表名like
 	显示建表语句:
 	SELECT DBMS_METADATA.GET_DDL('TABLE','EAM_ACCOUNT_INFO') FROM DUAL;
+
+三、cx_Oracle中的操作
+import cx_Oracle
+# 注掉这两种不知道为什么不好使，可以是因为没有建network/admin中的那个文件
+#db = cx_Oracle.connect('hr', 'hrpwd', 'localhost:1521/XE')
+#db1 = cx_Oracle.connect('hr/hrpwd@localhost:1521/XE')
+dsnStr = cx_Oracle.makedsn("localhost", "1521", "orcl")
+con = cx_Oracle.connect(user="eam", password="eam", dsn=dsnStr)
+c = con.cursor()
+#c.execute(u"SELECT DBMS_METADATA.GET_DDL('TABLE','EAM_ACCOUNT_INFO') FROM DUAL")
+c.execute(u"SELECT 1 FROM DUAL")
+for row in c:
+	print(row)
