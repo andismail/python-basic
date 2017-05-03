@@ -8,7 +8,7 @@ def decode_str(s):
         return None
     value, charset = decode_header(s)[0]
     if charset:
-        value = value.decode(charset)
+        value = value.decode(charset)# value.decode(charset, 'ignore') 有时有decode异常，可以用ignore
     return value
 
 
@@ -24,7 +24,7 @@ def receive(email_name):
 
     # 获得邮件
     messages = [server.retr(i) for i in range(1, len(server.list()[1]) + 1)]
-    messages = [b'\r\n'.join(msg[1]).decode() for msg in messages]
+    messages = [b'\r\n'.join(msg[1]).decode() for msg in messages]# .decode('utf-8', 'ignore') 有时会decode异常，可以这样处理
     messages = [Parser().parsestr(msg) for msg in messages]
     messages = messages[::-1]
 
