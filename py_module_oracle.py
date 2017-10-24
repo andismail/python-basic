@@ -72,3 +72,7 @@ c = con.cursor()
 c.execute(u"SELECT 1 FROM DUAL")
 for row in c:
 	print(row)
+
+四、数据恢复
+	su - oracle
+	impdp eam/eam directory=pump_dir dumpfile=路径/数据文件.dmp full=y
